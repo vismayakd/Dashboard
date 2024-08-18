@@ -1,14 +1,19 @@
-// import logo from './logo.svg';
-import './App.css';
-import HomePage from './Components/HomePage';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from './redux/store'; 
+import Dashboard from './components/Dashboard';
+
 
 function App() {
   return (
-    <div className="App">
-      
-       <HomePage/>
-      
-    </div>
+    <Provider store={store}>
+      <PersistGate  loading={null} persistor={persistor}>
+        <div className="App">
+          <Dashboard />
+        </div>
+      </PersistGate>
+    </Provider>
   );
 }
 

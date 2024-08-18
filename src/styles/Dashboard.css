@@ -1,0 +1,15 @@
+.dashboard-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .category-container {
+    margin-bottom: 20px;
+  }
+  
+  .widgets-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
